@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Vehicle Detail</h2>
+    <table>
+        <tr>
+            <th>Vehicle Number:</th>
+            <td>{{ Vehicle.vehicle_number }}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Type:</th>
+            <td>{{ Vehicle.vehicle_type }}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Model:</th>
+            <td>{{ Vehicle.vehicle_model }}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Description:</th>
+            <td>{{ Vehicle.vehicle_description }}</td>
+        </tr>
+    </table>
+    <p><a href="{% url 'vehicle_list' %}">Back to Vehicle List</a></p>
+{% endblock %}

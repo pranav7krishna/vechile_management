@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Delete Vehicle</h2>
+    <p>Are you sure you want to delete the following vehicle?</p>
+    <table>
+    </table>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+    <p><a href="{% url 'vehicle_list' %}">Cancel and Back to Vehicle List</a></p>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Vechile management{% endblock %}</title>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+
+        {% if user.is_authenticated %}
+             <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>
+
